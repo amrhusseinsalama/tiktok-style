@@ -1,83 +1,172 @@
 # TikTok Style Flutter App
 
-A TikTok-style Flutter application built as a Flutter Developer Assessment.
+A TikTok-style Flutter application built as a Flutter Developer Assessment using Flutter, Clean Architecture, and BLoC State Management.
+
+---
 
 ## Features
 
 ### Video Feed
-- Vertical scrolling feed
-- Auto-play visible video
-- Pause previous video when scrolling
-- Loop videos
-- Like button
-- Share button
+
+- Vertical scrolling video feed
+- Auto-play active video
+- Pause inactive videos while scrolling
+- Loop video playback
+- Like videos
+- Share videos
 - Video progress indicator
-- Scrubbing support (seek forward/backward)
+- Video scrubbing (seek forward/backward)
 
 ### Video Caching
+
 - Cache videos after first playback
-- Play cached videos when available
+- Load cached videos when available
 - Prevent duplicate downloads
 
 ### Camera
-- Record video up to 30 seconds
-- Switch front/back camera
+
+- Record videos up to 30 seconds
+- Switch between front and back cameras
 - Live camera filters
 - Video preview before publishing
-- Publish recorded videos to feed
+- Publish recorded videos directly to the feed
 
-### Architecture
-- Clean Architecture
+---
+
+## Architecture
+
+The project follows a simplified Clean Architecture approach with Feature-Based Structure.
+
+### Presentation Layer
+
+Responsible for UI and State Management.
+
+- Flutter Widgets
+- Screens / Views
+- Reusable Components
 - Cubit (flutter_bloc)
-- Dependency Injection using GetIt
+- BlocConsumer
+- BlocProvider
+
+### Domain Layer
+
+Responsible for business rules and contracts.
+
+- Entities
+- Repository Contracts
+
+### Data Layer
+
+Responsible for data retrieval and management.
+
+- Repository Implementations
+- Models
+- Local JSON Data Source
+- Video Cache Service
+
+### Core Layer
+
+Shared utilities and app-wide services.
+
+- Dependency Injection (GetIt)
+- Routing System
+- Navigation Extensions
+- Video Filters
+- Helpers & Utilities
+- Reusable Widgets
+
+---
 
 ## Packages Used
 
 - flutter_bloc
 - get_it
+- equatable
 - camera
 - video_player
+- flutter_screenutil
 - cached_video_player_plus
 - flutter_cache_manager
-- flutter_screenutil
-- equatable
+
+---
 
 ## Project Structure
 
 ```text
-lib/
-├── core/
-├── features/
-│   ├── camera/
-│   └── video_feed/
-├── routing/
+lib
+├── core
+│   ├── di
+│   │   └── dependency_injection.dart
+│   │
+│   ├── helper
+│   │   ├── extensions.dart
+│   │   ├── spacing.dart
+│   │   └── video_filters.dart
+│   │
+│   ├── routing
+│   │   ├── app_router.dart
+│   │   └── routes.dart
+│   │
+│   ├── services
+│   │   └── video_cache_service.dart
+│   │
+│   └── widgets
+│
+├── features
+│   ├── camera
+│   │   └── presentation
+│   │       ├── cubit
+│   │       ├── views
+│   │       └── widgets
+│   │
+│   └── video_feed
+│       ├── data
+│       │   ├── datasources
+│       │   ├── models
+│       │   └── repositories
+│       │
+│       ├── domain
+│       │   ├── entities
+│       │   └── repositories
+│       │
+│       └── presentation
+│           ├── cubit
+│           ├── views
+│           └── widgets
+│
+├── bottom_nav_bar.dart
 └── main.dart
 ```
 
 ## Setup
 
-1. Clone repository
+### 1. Clone Repository
 
 ```bash
-git clone YOUR_REPO_LINK
+git clone https://github.com/amrhusseinsalama/tiktok-style.git
 ```
 
-2. Install dependencies
+### 2. Install Dependencies
 
 ```bash
 flutter pub get
 ```
 
-3. Run application
+### 3. Run Application
 
 ```bash
 flutter run
 ```
 
+---
+
 ## APK
 
-APK included in submission.
+APK file included in the submission.
+
+---
 
 ## Author
 
-Amr Hussein
+**Amr Hussein**
+Flutter Developer
