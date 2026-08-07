@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "username": "amr_dev",
+    "userAvatar": "",
+    "caption": "Building a TikTok Clone 🚀 #flutter #coding #mobiledev",
+    "videoUrl": "https://vjs.zencdn.net/v/oceans.mp4",
+    "likesCount": 1250,
+    "sharesCount": 120,
+    "isLiked": false
+  },
+  {
+    "id": "2",
+    "username": "flutter_egypt",
+    "userAvatar": "",
+    "caption": "Clean Architecture 🔥 #flutter #bloc #cleanarchitecture",
+    "videoUrl": "https://media.w3.org/2010/05/sintel/trailer.mp4",
+    "likesCount": 890,
+    "sharesCount": 55,
+    "isLiked": false
+  },
+  {
+    "id": "3",
+    "username": "travel_world",
+    "userAvatar": "",
+    "caption": "Beautiful nature 🌅 #travel #nature #explore",
+    "videoUrl": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    "likesCount": 3400,
+    "sharesCount": 210,
+    "isLiked": false
+  },
+  {
+    "id": "4",
+    "username": "foodlover",
+    "userAvatar": "",
+    "caption": "Amazing food 😋 #food #burger #streetfood",
+    "videoUrl": "https://media.w3.org/2010/05/bunny/movie.mp4",
+    "likesCount": 5200,
+    "sharesCount": 650,
+    "isLiked": false
+  },
+  {
+    "id": "5",
+    "username": "gym_motivation",
+    "userAvatar": "",
+    "caption": "Never skip leg day 💪 #fitness #gym #motivation",
+    "videoUrl": "https://vjs.zencdn.net/v/oceans.mp4",
+    "likesCount": 7800,
+    "sharesCount": 920,
+    "isLiked": false
+  }
+]
