@@ -37,6 +37,11 @@ A TikTok-style Flutter application built as a Flutter Developer Assessment using
 
 The project follows a simplified Clean Architecture approach with Feature-Based Structure.
 
+- **Presentation Layer** → UI, Cubits, Widgets.
+- **Domain Layer** → Business Logic, Entities, Repository Contracts.
+- **Data Layer** → Repository Implementations, Models, Data Sources.
+- **Core Layer** → Shared Utilities, Routing, Dependency Injection, Services.
+
 ### Presentation Layer
 
 Responsible for UI and State Management.
